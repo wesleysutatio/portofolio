@@ -118,7 +118,7 @@ export default function Navbar() {
     return (
         <>
             <nav
-                className={`fixed left-1/2 top-6 z-50 -translate-x-1/2 transition-all duration-1000 ${isLoaded
+                className={`fixed md:left-1/2 left-12 top-6 z-50 -translate-x-1/2 transition-all duration-1000 ${isLoaded
                     ? "translate-y-0 opacity-100"
                     : "-translate-y-6 opacity-0"
                     }`}
@@ -171,7 +171,7 @@ export default function Navbar() {
                 <button
                     onClick={() => setIsMobileMenuOpen(false)}
                     aria-label="Close menu"
-                    className="cursor-pointer absolute right-6 top-6 flex items-center justify-center rounded-full border border-zinc-700/60 bg-zinc-900/70 p-3"
+                    className="cursor-pointer absolute left-6 top-6 flex items-center justify-center rounded-full border border-zinc-700/60 bg-zinc-900/70 p-3"
                 >
                     <HiX size={22} className="text-white" />
                 </button>
