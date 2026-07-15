@@ -12,7 +12,7 @@ export default function CoreStrengthsSection() {
                     Core Strengths
                 </h2>
 
-                <div className="mt-12 grid gap-6 sm:grid-cols-2 xl:grid-cols-3">
+                <div className="mt-12 grid gap-6 xs:grid-cols-1 md:grid-cols-3">
                     {generalskills.map((skill) => (
                         <div
                             key={skill.name}

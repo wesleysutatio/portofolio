@@ -1,7 +1,7 @@
 export interface ContactLink {
     label: string;
     href: string;
-    icon: "linkedin" | "github" | "whatsapp" | "email";
+    icon: "linkedin" | "github" | "whatsapp" | "cv";
 }
 
 export const contactEmail = "wesleysutatio291104@gmail.com";
@@ -25,6 +25,6 @@ export const contactLinks: ContactLink[] = [
     {
         label: "Curriculum Vitae",
         href: "https://canva.link/5c8bgw1glk0x54l",
-        icon: "email",
+        icon: "cv",
     },
 ];

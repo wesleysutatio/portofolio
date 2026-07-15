@@ -1,7 +1,7 @@
 "use client";
 
 import { useActionState } from "react";
-import { FaLinkedin, FaGithub, FaInstagram, FaWhatsapp, FaEnvelope } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaInstagram, FaWhatsapp, FaEnvelope, FaNewspaper } from "react-icons/fa";
 import Container from "../Container";
 import { contactLinks } from "@/data/contact";
 import { sendContactMessage, type ContactFormState } from "@/actions/sendContactMessage";
@@ -12,6 +12,7 @@ const iconMap = {
     instagram: FaInstagram,
     whatsapp: FaWhatsapp,
     email: FaEnvelope,
+    cv: FaNewspaper
 };
 
 const initialState: ContactFormState = { success: false, message: "" };
