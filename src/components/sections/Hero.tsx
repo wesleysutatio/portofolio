@@ -21,8 +21,12 @@ export default function Hero({ onLearnMore, showAbout }: HeroProps) {
                             {heroData.badge}
                         </div>
 
-                        <h1 className="max-w-4xl text-5xl font-bold tracking-tight sm:text-6xl lg:text-7xl">
+                        <h1 className="max-w-4xl  whitespace-nowrap text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
                             {heroData.title}
+                        </h1>
+
+                        <h1 className="max-w-4xl text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl">
+                            {heroData.title2}
                         </h1>
 
                         <p className="mt-6 max-w-3xl text-base leading-8 text-zinc-400">

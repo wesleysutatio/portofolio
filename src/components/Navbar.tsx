@@ -123,7 +123,7 @@ export default function Navbar() {
                     : "-translate-y-6 opacity-0"
                     }`}
             >
-                <div className="hidden items-center gap-2 rounded-full border border-zinc-700/60 bg-zinc-900/70 px-2 py-2 shadow-lg backdrop-blur-xl md:relative md:flex">
+                <div className="hidden whitespace-nowrap items-center gap-2 rounded-full border border-zinc-700/60 bg-zinc-900/70 px-2 py-2 shadow-lg backdrop-blur-xl md:relative md:flex">
                     <div
                         className="absolute rounded-full bg-white/10 transition-all ease-in-out"
                         style={{

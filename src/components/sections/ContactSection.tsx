@@ -3,8 +3,8 @@
 import { useActionState } from "react";
 import { FaLinkedin, FaGithub, FaInstagram, FaWhatsapp, FaEnvelope } from "react-icons/fa";
 import Container from "../Container";
-import { contactEmail, contactLinks } from "@/data/contact";
-import { sendContactMessage, type ContactFormState } from "@/actions/contact";
+import { contactLinks } from "@/data/contact";
+import { sendContactMessage, type ContactFormState } from "@/actions/sendContactMessage";
 
 const iconMap = {
     linkedin: FaLinkedin,
@@ -118,16 +118,6 @@ export default function ContactSection() {
                     </form>
 
                     <div className="flex flex-col gap-6">
-                        <div className="rounded-3xl border border-zinc-700 bg-zinc-900/70 p-6 shadow-lg shadow-black/20 sm:p-8">
-                            <p className="text-sm text-zinc-400">Email</p>
-
-                            <a
-                                href={`mailto:${contactEmail}`}
-                                className="mt-2 block text-lg font-medium text-white transition hover:text-zinc-300"
-                            >
-                                {contactEmail}
-                            </a>
-                        </div>
 
                         <div className="grid gap-4 sm:grid-cols-2">
                             {contactLinks.map((link) => {
