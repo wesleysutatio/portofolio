@@ -44,12 +44,10 @@ export default function Hero({ onLearnMore, showAbout }: HeroProps) {
                                 </a>
 
                                 {!showAbout && (
-                                    <div className="absolute left-1/2 top-full mt-5 flex -translate-x-1/2 flex-col items-center gap-1 text-xs text-zinc-500">
+                                    <div className="absolute left-1/2 top-full mt-5 flex -translate-x-1/2 flex-col items-center gap-1 text-base text-zinc-500">
                                         <HiChevronUp size={16} className="animate-bounce" />
-                                        <span className="text-center leading-snug">
-                                            Find out
-                                            <br />
-                                            about me
+                                        <span className="whitespace-nowrap text-center leading-snug">
+                                            Click Me !
                                         </span>
                                     </div>
                                 )}
