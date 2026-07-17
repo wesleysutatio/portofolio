@@ -130,7 +130,7 @@ export default function ContactSection() {
                                         href={link.href}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="flex items-center gap-3 rounded-2xl border border-zinc-700 bg-zinc-900/70 p-5 shadow-lg shadow-black/20 transition-all duration-300 hover:-translate-y-1 hover:border-zinc-500 hover:bg-zinc-800/80"
+                                        className="flex items-center gap-3 rounded-2xl border border-zinc-700 bg-zinc-900/70 p-5 shadow-lg shadow-black/20 transition-all duration-300 hover:-translate-y-1 hover:bg-zinc-800/80 hover:shadow-xl hover:border-accent/60 hover:shadow-accent/20"
                                     >
                                         <Icon size={22} className="text-zinc-200" />
 

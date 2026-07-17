@@ -83,7 +83,7 @@ export default function ProjectsSection() {
                         return (
                             <div
                                 key={project.title}
-                                className="rounded-3xl border border-zinc-700 bg-zinc-900/70 shadow-lg shadow-black/20 transition-all duration-300 hover:border-zinc-500"
+                                className="rounded-3xl border border-zinc-700 bg-zinc-900/70 shadow-lg shadow-black/20 transition-all duration-300 hover:border-accent/60 hover:shadow-xl hover:shadow-accent/20"
                             >
                                 <ProjectGallery
                                     images={project.images}

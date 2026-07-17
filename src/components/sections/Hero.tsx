@@ -63,7 +63,7 @@ export default function Hero({ onLearnMore, showAbout }: HeroProps) {
                                     e.preventDefault();
                                     smoothScrollTo("contact");
                                 }}
-                                className="inline-block rounded-full border border-zinc-700 px-6 py-3 font-medium text-white transition hover:border-zinc-500"
+                                className="inline-block rounded-full border border-zinc-700 px-6 py-3 font-medium text-white transition hover:shadow-xl hover:shadow-accent/20 hover:border-accent/60 hover:scale-105"
                             >
                                 Contact Me
                             </a>
