@@ -32,7 +32,6 @@ export default function Navbar() {
 
     const linkRefs = useRef<(HTMLAnchorElement | null)[]>([]);
     const isClickScrolling = useRef(false);
-    const unlockTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
     useEffect(() => {
         const timer = setTimeout(() => {
@@ -60,13 +59,20 @@ export default function Navbar() {
             }
         };
 
+        const handleScrollLock = (e: Event) => {
+            const customEvent = e as CustomEvent<boolean>;
+            isClickScrolling.current = customEvent.detail;
+        };
+
         window.addEventListener("scroll", handleScroll);
+        window.addEventListener("scroll-lock", handleScrollLock);
 
         handleScroll();
 
         return () => {
             clearTimeout(timer);
             window.removeEventListener("scroll", handleScroll);
+            window.removeEventListener("scroll-lock", handleScrollLock);
         };
     }, []);
 
@@ -94,16 +100,12 @@ export default function Navbar() {
     }, [isMobileMenuOpen]);
 
     const handleNavClick = (item: NavItem) => {
-        if (unlockTimeoutRef.current) {
-            clearTimeout(unlockTimeoutRef.current);
-        }
-
-        isClickScrolling.current = true;
+        window.dispatchEvent(new CustomEvent("scroll-lock", { detail: true }));
         setActiveSection(item.sectionIds[0]);
         smoothScrollTo(item.href.replace("#", ""), SCROLL_DURATION);
 
-        unlockTimeoutRef.current = setTimeout(() => {
-            isClickScrolling.current = false;
+        setTimeout(() => {
+            window.dispatchEvent(new CustomEvent("scroll-lock", { detail: false }));
         }, SCROLL_DURATION);
     };
 

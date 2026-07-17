@@ -6,7 +6,7 @@ import Hero from "./Hero";
 import AboutSection from "./AboutSection";
 import { smoothScrollTo } from "@/lib/smoothScroll";
 
-const SCROLL_DURATION = 1200;
+const SCROLL_DURATION = 800;
 const ACCORDION_DURATION = 0.7;
 
 export default function IntroSection() {
@@ -16,6 +16,8 @@ export default function IntroSection() {
     useEffect(() => {
         if (!mounted) return;
 
+        window.dispatchEvent(new CustomEvent("scroll-lock", { detail: true }));
+
         const raf = requestAnimationFrame(() => {
             smoothScrollTo("about-section", SCROLL_DURATION);
 
@@ -24,7 +26,16 @@ export default function IntroSection() {
             }, SCROLL_DURATION);
         });
 
-        return () => cancelAnimationFrame(raf);
+        const totalDuration = SCROLL_DURATION + ACCORDION_DURATION * 1000;
+
+        const unlockTimer = setTimeout(() => {
+            window.dispatchEvent(new CustomEvent("scroll-lock", { detail: false }));
+        }, totalDuration);
+
+        return () => {
+            cancelAnimationFrame(raf);
+            clearTimeout(unlockTimer);
+        };
     }, [mounted]);
 
     const handleLearnMore = () => {
@@ -32,15 +43,23 @@ export default function IntroSection() {
     };
 
     const handleShowLess = () => {
+        window.dispatchEvent(new CustomEvent("scroll-lock", { detail: true }));
+
         smoothScrollTo("about", SCROLL_DURATION);
 
         setTimeout(() => {
             setExpanded(false);
         }, SCROLL_DURATION);
 
+        const totalDuration = SCROLL_DURATION + ACCORDION_DURATION * 1000;
+
         setTimeout(() => {
             setMounted(false);
-        }, SCROLL_DURATION + ACCORDION_DURATION * 1000);
+        }, totalDuration);
+
+        setTimeout(() => {
+            window.dispatchEvent(new CustomEvent("scroll-lock", { detail: false }));
+        }, totalDuration);
     };
 
     return (

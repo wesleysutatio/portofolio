@@ -17,7 +17,7 @@ export default function Hero({ onLearnMore, showAbout }: HeroProps) {
             <Container>
                 <div className="grid items-center gap-12 lg:grid-cols-[1.2fr_0.8fr]">
                     <div>
-                        <div className="mb-6 inline-flex items-center rounded-full border border-zinc-700 bg-zinc-800/60 px-4 py-2 text-sm text-zinc-200 backdrop-blur-md">
+                        <div className="mb-6 inline-flex items-center rounded-full border border-accent/40 bg-zinc-800/60 px-4 py-2 text-sm text-accent backdrop-blur-md">
                             {heroData.badge}
                         </div>
 

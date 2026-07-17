@@ -16,7 +16,7 @@ export default function CoreStrengthsSection() {
                     {generalskills.map((skill) => (
                         <div
                             key={skill.name}
-                            className="rounded-3xl border border-zinc-700 bg-zinc-900/70 p-8 shadow-lg shadow-black/20 transition-all duration-300 hover:-translate-y-2 hover:border-zinc-500 hover:bg-zinc-800/80"
+                            className="rounded-3xl border border-zinc-700 bg-zinc-900/70 p-8 shadow-lg shadow-black/20 transition-all duration-300 hover:-translate-y-2 hover:border-accent/60 hover:bg-zinc-800/80 hover:shadow-xl hover:shadow-accent/20"
                         >
                             <h3 className="text-2xl font-semibold">
                                 {skill.name}
@@ -28,7 +28,7 @@ export default function CoreStrengthsSection() {
                                         key={index}
                                         className={
                                             index < skill.rating
-                                                ? "text-white"
+                                                ? "text-accent"
                                                 : "text-zinc-700"
                                         }
                                     >

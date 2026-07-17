@@ -1,9 +1,10 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
 import Container from "../Container";
 import { projects } from "@/data/project";
+import { HiArrowRight } from "react-icons/hi";
 
 const statusConfig = {
     completed: { label: "Completed", dot: "bg-emerald-400" },
@@ -147,9 +148,13 @@ export default function ProjectsSection() {
                                             href={project.link}
                                             target="_blank"
                                             rel="noopener noreferrer"
-                                            className="mt-4 inline-block text-sm font-medium text-white underline underline-offset-4 transition hover:text-zinc-300"
+                                            className="group mt-4 inline-flex items-center gap-1.5 text-sm font-medium underline text-accent transition hover:text-accent/70"
                                         >
-                                            View Live Project
+                                            View Project
+                                            <HiArrowRight
+                                                size={16}
+                                                className="transition-transform duration-300 group-hover:translate-x-1"
+                                            />
                                         </a>
                                     )}
 

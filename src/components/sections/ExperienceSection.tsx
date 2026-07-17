@@ -5,7 +5,7 @@ export default function ExperienceSection() {
     return (
         <section
             id="experience"
-            className="py-16"
+            className="pb-16 pt-28 sm:pt-16"
         >
             <Container>
                 <div className="w-full">
@@ -22,9 +22,9 @@ export default function ExperienceSection() {
                                     key={experience.organization}
                                     className="relative pl-16"
                                 >
-                                    <div className="absolute left-[7px] top-8 h-4 w-4 rounded-full border-4 border-zinc-950 bg-white" />
+                                    <div className="absolute left-[8px] top-8 h-4 w-4 rounded-full border-4 border-zinc-950 bg-accent" />
 
-                                    <div className="rounded-3xl border border-zinc-700 bg-zinc-900/70 p-6 shadow-lg shadow-black/20 transition-all duration-300 hover:-translate-y-2 hover:border-zinc-500 hover:bg-zinc-800/80">
+                                    <div className="rounded-3xl border border-zinc-700 bg-zinc-900/70 p-6 shadow-lg shadow-black/20 transition-all duration-300 hover:-translate-y-2 hover:border-accent/60 hover:bg-zinc-800/80 hover:shadow-xl hover:shadow-accent/20">
                                         <h3 className="text-xl font-semibold">
                                             {experience.organization}
                                         </h3>

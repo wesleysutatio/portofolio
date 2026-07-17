@@ -29,6 +29,7 @@ export const projects: Project[] = [
         project: "Volicci Company",
         team: "Individual",
         techStack: ["Figma"],
+        link: "https://www.figma.com/design/BPwKYjAPHfizIwGs9fimXd/Volicci-Website?node-id=2-3&t=zmMVRf4L2wMj0BeI-1",
     },
 
     {
