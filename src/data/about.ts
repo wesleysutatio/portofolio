@@ -37,7 +37,7 @@ export const aboutData = {
         {
             heading: "Why BINUS University?",
             content:
-                `BINUS University was definitely one of the top universities in Indonesia that everybody has always recommend for tech-related studies, so I wasn't hesitant to apply my study there.`
+                `I chose BINUS University because it is one of the top universities in Indonesia for tech-related studies. Based on my research and deep web browsing, I found that BINUS' Computer Science curriculum is more less the same with top global universities in the world. I also found BINUS' alumni that succeed and work in a big company overseas. Therefore, it is my top choice for my studies.`
         }
     ]
 };
