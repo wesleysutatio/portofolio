@@ -7,6 +7,8 @@ import {
     FaCss3Alt,
     FaJs,
     FaJava,
+    FaVuejs,
+    FaNodeJs,
 } from "react-icons/fa";
 
 import {
@@ -16,6 +18,8 @@ import {
     SiMysql,
     SiPython,
     SiCplusplus,
+    SiDjango,
+    SiSpringboot,
 } from "react-icons/si";
 
 const skillColors: Record<string, string> = {
@@ -31,6 +35,10 @@ const skillColors: Record<string, string> = {
     "React.js": "#61DAFB",
     "Next.js": "#FAFAFA",
     "TypeScript": "#3178C6",
+    "Vue": "#41B883",
+    "Springboot": "#6DB33F",
+    "Node": "#215732",
+    "Django": "#092E20"
 };
 
 function getSkillIcon(name: string) {
@@ -70,6 +78,18 @@ function getSkillIcon(name: string) {
 
         case "TypeScript":
             return <SiTypescript size={42} />;
+
+        case "Vue":
+            return <FaVuejs size={42} />;
+
+        case "Django":
+            return <SiDjango size={42} />;
+
+        case "Node":
+            return <FaNodeJs size={42} />;
+
+        case "Springboot":
+            return <SiSpringboot size={42} />;
 
         default:
             return null;

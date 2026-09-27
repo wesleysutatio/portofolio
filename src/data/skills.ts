@@ -13,6 +13,12 @@ export const skills = [
 
 
     {
+        name: "Vue",
+        percentage: 85
+    },
+
+
+    {
         name: "CSS",
         percentage: 80
     },
@@ -20,6 +26,18 @@ export const skills = [
 
     {
         name: "JavaScript",
+        percentage: 80
+    },
+
+
+    {
+        name: "Node",
+        percentage: 80
+    },
+
+
+    {
+        name: "Python",
         percentage: 80
     },
 
@@ -37,6 +55,12 @@ export const skills = [
 
 
     {
+        name: "Django",
+        percentage: 75
+    },
+
+
+    {
         name: "MySQL",
         percentage: 75
     },
@@ -49,6 +73,12 @@ export const skills = [
 
 
     {
+        name: "Springboot",
+        percentage: 75
+    },
+
+
+    {
         name: "ASPX",
         percentage: 70
     },
@@ -56,12 +86,6 @@ export const skills = [
 
     {
         name: "ASP.NET",
-        percentage: 65
-    },
-
-
-    {
-        name: "Python",
         percentage: 65
     },
 
