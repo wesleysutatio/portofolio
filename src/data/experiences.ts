@@ -15,6 +15,20 @@ export const experiences = [
     },
 
     {
+        organization: "Proty",
+
+        roles: [
+            {
+                title: "AI Agent Developer",
+                period: "Jun 2026 - Jul 2026",
+                duration: "2 mos",
+                description:
+                    "Build AI Agents (Content Strategies, Story Writer, and Creative Director) to help create social media content for Proty. These AI Agents are built and developed using Claude Environments, and are used to plan and shape Proty's content direction."
+            }
+        ]
+    },
+
+    {
         organization: "BINUS University",
 
         roles: [
