@@ -8,5 +8,5 @@ export const heroData = {
     description:
         "An undergraduate Computer Science student specializing in Software Engineering at BINUS University Alam Sutera. Experienced in front-end development, back-end development, and database management through academic projects. Passionate for front-end development and UI/UX design, while having and continuously developing leadership, communication, and problem-solving skills.",
 
-    image: "/profile-picture.jpg",
+    image: "/profile-pic.png",
 };
